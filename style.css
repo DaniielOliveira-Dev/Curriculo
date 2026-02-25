@@ -1,0 +1,121 @@
+/* -- CONFIGURAÇÃO GERAL -- */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+
+/* -- TÍTULO PRINCIPAL -- */
+
+#topo {
+    background-color: rgb(0, 51, 102);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.subtitulo {
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+/* -- MENU DE NAVEGAÇÃO -- */
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #003366;
+}
+
+ul li {
+    display: inline-block;
+    margin: 10px 15px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: #ffcc00;
+}
+
+/* -- SEÇÕES -- */
+
+h2 {
+    color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 5px;
+    width: 90%;
+    margin: 30px auto 10px auto;
+}
+
+p, ul, form, strong, a {
+    width: 90%;
+    margin: auto;
+}
+
+/* -- HABILIDADES -- */
+
+#habilidades ul {
+    list-style-type: square;
+}
+
+.conteudo {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* -- LINKS -- */
+
+a {
+    color: #0066cc;
+}
+
+a:hover {
+    color: #ffcc00; 
+}
+
+/* -- FORMULÁRIO -- */
+
+form {
+    margin-top: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+}
+
+button {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 30%;
+}
+
+button:hover {
+    background-color: #ffcc00;
+}
+
+/* -- RODAPÉ -- */
+
+body > p:last-of-type {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+    color: rgba(0, 0, 0, 0.6);
+}
