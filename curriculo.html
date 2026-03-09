@@ -10,9 +10,10 @@
     
   </head>
   <body>
+    <button class= "btn-curriculo" onclick="gerarCurriculo()"> GERAR CURRÍCULO</button>
     <!-- CABEÇALHO DO CURRÍCULO -->
-    <h1 id="topo">Daniel de Oliveira Moreira</h1>
-    <p class="subtitulo">Desenvolvedor Júnior</p>
+    <h1 id="topo">Meu nome aqui</h1>
+    <p id="profissao" class="subtitulo">Minha profissão aqui</p>
 
     <ul>
       <li><a href="#sobre">Sobre</a></li>
@@ -24,29 +25,17 @@
 
     <!-- SOBRE MIM -->
     <h2 id="sobre">Sobre Mim</h2>
-    <p>
-      Sou formado em Administração e atualmente curso o 4º período de Análise e
-      Desenvolvimento de Sistemas. Trabalho há mais de seis anos no Instituto
-      Euvaldo Lodi (IEL/GO), onde atuo como Operador Chave, prestando suporte
-      técnico e operacional à equipe da área de Estágio.
+    <p id="sobreMim">
+      Sobre mim...
     </p>
-    <p>
-      Durante minha trajetória, desenvolvi uma base sólida em análise de
-      processos, tratamento de dados e homologação de sistemas, o que reforçou
-      meu interesse pelo desenvolvimento de software e pela aplicação da
-      tecnologia na melhoria de resultados.
+    <p id="sobreMim1">
+      
     </p>
-    <p>
-      Busco unir minha vivência administrativa ao universo da tecnologia,
-      contribuindo com soluções que tornem os processos mais eficientes e
-      conectem pessoas, dados e resultados.
+    <p id="sobreMim2">
+      
     </p>
-    <p>
-      Tenho conhecimentos em Java, Sap (ABAP / S4HANA), MySQL, PostgreSQL e Open
-      SQL, além de experiência com análise e modelagem de dados. Sou apaixonado
-      por desenvolvimento, inovação e aprendizado contínuo, e acredito que cada
-      projeto é uma oportunidade de evoluir e criar impacto positivo por meio da
-      tecnologia.
+    <p id="sobreMim3">
+      
     </p>
 
     <!-- FORMAÇÃO ACADÊMICA -->
@@ -58,7 +47,7 @@
       <br />
       <strong>Conclusão:</strong> 2025/2
     </p>
-
+  <br>
     <p>
       <strong>Curso:</strong> Análise e Desenvolvimento de Sistemas
       <br />
@@ -133,5 +122,17 @@
         2026 - Daniel de Oliveira Moreira. Todos os direitos reservados
       </p>
       <a href="#topo">Voltar ao topo</a>
+
+    <script>
+      const gerarCurriculo = () => {
+        document.getElementById("topo").innerText = "Daniel de Oliveira Moreira"
+        document.getElementById("profissao").innerText = "Desenvolvedor Júnior"
+        document.getElementById("sobreMim").innerText = "Sou formado em Administração e atualmente curso o 4º período de Análise e Desenvolvimento de Sistemas. Trabalho há mais de seis anos no Instituto Euvaldo Lodi (IEL/GO), onde atuo como Operador Chave, prestando suporte técnico e operacional à equipe da área de Estágio."
+        document.getElementById("sobreMim1").innerText = "Durante minha trajetória, desenvolvi uma base sólida em análise de processos, tratamento de dados e homologação de sistemas, o que reforçou meu interesse pelo desenvolvimento de software e pela aplicação da tecnologia na melhoria de resultados."
+        document.getElementById("sobreMim2").innerText = "Busco unir minha vivência administrativa ao universo da tecnologia, contribuindo com soluções que tornem os processos mais eficientes e conectem pessoas, dados e resultados."
+        document.getElementById("sobreMim3").innerText = "Tenho conhecimentos em Java, Sap (ABAP / S4HANA), MySQL, PostgreSQL e Open SQL, além de experiência com análise e modelagem de dados. Sou apaixonado por desenvolvimento, inovação e aprendizado contínuo, e acredito que cada projeto é uma oportunidade de evoluir e criar impacto positivo por meio da tecnologia."
+      }
+    </script>
+
   </body>
 </html>
