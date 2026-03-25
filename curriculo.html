@@ -6,8 +6,8 @@
     <title>Daniel de Oliveira Moreira</title>
 
     <!-- ABA DE STILOS CSS -->
-    <link rel="stylesheet" href="style.css" />
-    
+    <link rel="stylesheet" href="style.css" />  
+
   </head>
   <body>
     <button class= "btn-curriculo" onclick="gerarCurriculo()"> GERAR CURRÍCULO</button>
@@ -40,25 +40,13 @@
 
     <!-- FORMAÇÃO ACADÊMICA -->
     <h2 id="formacao">Formações</h2>
-    <p>
-      <strong>Curso:</strong> Adminitração
-      <br />
-      <strong>Instituição:</strong> Estácio de Sá
-      <br />
-      <strong>Conclusão:</strong> 2025/2
-    </p>
-  <br>
-    <p>
-      <strong>Curso:</strong> Análise e Desenvolvimento de Sistemas
-      <br />
-      <strong>Instituição:</strong> Senai Fatesg
-      <br />
-      <strong>Conclusão:</strong> 2026/2
-    </p>
+
+    <ul class="lista formacao" id="listaFormacao"></ul>
+
 
     <!-- HABILIDADES -->
     <h2 id="habilidades">Habilidades</h2>
-    <ul>
+    <ul class="lista habilidades">
       <li style="color: white">Java</li>
       <li style="color: white">ABAP</li>
       <li style="color: white">HTML</li>
@@ -69,40 +57,12 @@
 
     <!-- PROJETOS -->
     <h2 id="projetos">Projetos</h2>
-    <div class="conteudo">
-    <strong>Nome:</strong> Sistema de Gestão de Locadora de Veículos (SAP ABAP)
-    <br>
-    <strong>Descrição:</strong> Desenvolvimento de uma aplicação completa em
-    ABAP para gerenciar o ciclo de locação e devolução de frotas. O sistema
-    controla o status de disponibilidade dos veículos em tempo real
-    (Disponível/Alugado) e automatiza o registro de datas de retirada e
-    devolução. Inclui um módulo de histórico para persistência de locações
-    encerradas e relatórios gerenciais básicos para monitoramento da operação.
-    Técnico: Implementação de tabelas transparentes (Dicionário de Dados),
-    lógica de processamento em Módulos de Função e interface de usuário via
-    Module Pool (Dynpros).
-    <br>
-    <strong>GitHub: </strong>
-    <a href="https://github.com/DaniielOliveira-Dev/ProjetoAbap-Locadora.git">Clique aqui</a>
-    <br>
-    <br>
-    <strong>Nome:</strong> Sistema de Gerenciamento de Cinema (Java)
-    <br>
-    <strong>Descrição:</strong> 
-    <br>
-    <strong>GitHub:</strong>
-    <a href="https://github.com/DaniielOliveira-Dev/ProjetoJava-CineABC.git">Clique aqui</a>
-    <br>
-    </div>
+    <ul class="lista projetos" id="listaProjeto"></ul>
+
     <!-- CONTEÚDO COMPLEMENTAR -->
     <h2>Links Profissionais:</h2>
-    <div class="conteudo">
-    <strong>GitHub:</strong>
-    <a href="https://github.com/DaniielOliveira-Dev">Clique aqui</a>
-    <br>
-    <strong>Linkedin:</strong>
-    <a href="https://www.linkedin.com/in/daniel-de-oliveira-moreira/">Clique aqui</a>
-    </div>
+    <ul class="lista link" id="listaLink"></ul>
+    
     <!-- CONTATOS -->
      <h2 id="contato">Contatos</h2>
      <form>
@@ -124,14 +84,95 @@
       <a href="#topo">Voltar ao topo</a>
 
     <script>
+
+        const formacoes = [
+        {"curso": "Administração",
+        "instituicao": "Estácio de Sá",
+        "conclusao": "2025/2" 
+        },
+        {"curso": "Análise e Desenvolvimento de Sistemas",
+        "instituicao": "Senai Fatesg",
+        "conclusao": "2026/2"
+        }
+    ]
+      const projetos = [
+      {"nome": "Sistema de Gestão de Locadora de Veículos (SAP ABAP)",
+      "descricao": "Desenvolvimento de uma aplicação completa em ABAP para gerenciar o ciclo de locação e devolução de frotas. O sistema controla o status de disponibilidade dos veículos em tempo real (Disponível/Alugado) e automatiza o registro de datas de retirada e devolução. Inclui um módulo de histórico para persistência de locações encerradas e relatórios gerenciais básicos para monitoramento da operação. Técnico: Implementação de tabelas transparentes (Dicionário de Dados), lógica de processamento em Módulos de Função e interface de usuário via Module Pool (Dynpros).",
+      "gitHub": "https://github.com/DaniielOliveira-Dev/ProjetoAbap-Locadora.git"
+      },
+      {"nome": "Sistema de Gerenciamento de Cinema (Java)",
+      "descricao": "A preencher",
+      "gitHub": "https://github.com/DaniielOliveira-Dev/ProjetoJava-CineABC.git" 
+      }
+    ]
+      const links = [
+        {"nome":  "GitHub:",
+        "url": "https://github.com/DaniielOliveira-Dev",
+        },
+        {"nome": "LinkedIn:",
+        "url": "https://www.linkedin.com/in/daniel-de-oliveira-moreira/"
+        }
+      ]
+
       const gerarCurriculo = () => {
         document.getElementById("topo").innerText = "Daniel de Oliveira Moreira"
         document.getElementById("profissao").innerText = "Desenvolvedor Júnior"
         document.getElementById("sobreMim").innerText = "Sou formado em Administração e atualmente curso o 4º período de Análise e Desenvolvimento de Sistemas. Trabalho há mais de seis anos no Instituto Euvaldo Lodi (IEL/GO), onde atuo como Operador Chave, prestando suporte técnico e operacional à equipe da área de Estágio."
         document.getElementById("sobreMim1").innerText = "Durante minha trajetória, desenvolvi uma base sólida em análise de processos, tratamento de dados e homologação de sistemas, o que reforçou meu interesse pelo desenvolvimento de software e pela aplicação da tecnologia na melhoria de resultados."
         document.getElementById("sobreMim2").innerText = "Busco unir minha vivência administrativa ao universo da tecnologia, contribuindo com soluções que tornem os processos mais eficientes e conectem pessoas, dados e resultados."
-        document.getElementById("sobreMim3").innerText = "Tenho conhecimentos em Java, Sap (ABAP / S4HANA), MySQL, PostgreSQL e Open SQL, além de experiência com análise e modelagem de dados. Sou apaixonado por desenvolvimento, inovação e aprendizado contínuo, e acredito que cada projeto é uma oportunidade de evoluir e criar impacto positivo por meio da tecnologia."
+        document.getElementById("sobreMim3").innerText = "Tenho conhecimentos em Java, Sap (ABAP / S4HANA), MySQL, PostgreSQL e Open SQL, além de experiência com análise e modelagem de dados. Sou apaixonado por desenvolvimento, inovação e aprendizado contínuo, e acredito que cada projeto é uma oportunidade de evoluir e criar impacto positivo por meio da tecnologia."     
+      
+        const listaFormacoes = document.getElementById("listaFormacao")        
+        
+        for (let i = 0; i < formacoes.length; i++) {
+          const element = formacoes[i];    
+          const item = document.createElement("li")
+          item.classList.add("itemformacao")
+          item.innerHTML = `
+          <div> 
+          <strong>Curso:</strong> ${element.curso}<br>
+          <strong>Instituição:</strong> ${element.instituicao}<br>
+          <strong>Conclusão:</strong> ${element.conclusao}
+          </div>
+        `
+          listaFormacoes.appendChild(item)
+        }
+      
+        const listaProjetos = document.getElementById("listaProjeto")
+        
+        for (let i= 0; i < projetos.length; i++){
+          const element = projetos[i];
+          const item = document.createElement("li")
+          item.classList.add("itemprojetos")
+          item.innerHTML = `
+          <div>
+          <strong>Nome:</strong> ${element.nome}<br>
+          <strong>Descrição:</strong> ${element.descricao}<br>
+          <strong>GitHub:</strong>
+          <a href="${element.gitHub}" target="_blank" class="btnprojetos">Ver projeto</a>
+          </div>
+          `
+          listaProjetos.appendChild(item)
+        }
+        
+      const listaLinks = document.getElementById("listaLink")
+
+        for (let i=0; i < links.length; i++) {
+        const element = links[i];
+        const item = document.createElement("li");
+        item.classList.add("itemlink")
+        item.innerHTML = `
+          <div>
+          <strong>${element.nome}</strong>
+          <a href="${element.linkedin}" target="_blank" class="btnlink">Clique aqui</a>
+          </div>
+          `  
+          
+          listaLinks.appendChild(item)
+        }
+
       }
+
     </script>
 
   </body>

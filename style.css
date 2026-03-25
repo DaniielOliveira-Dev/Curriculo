@@ -73,7 +73,7 @@ h2 {
     border-bottom: 2px solid #003366;
     padding-bottom: 5px;
     width: 90%;
-    margin: 30px auto 10px auto;
+    margin: 30px auto 5px auto;
 }
 
 p, ul, form, strong, a {
@@ -85,11 +85,6 @@ p, ul, form, strong, a {
 
 #habilidades ul {
     list-style-type: square;
-}
-
-.conteudo {
-    width: 90%;
-    margin: 0 auto;
 }
 
 /* -- LINKS -- */
@@ -134,4 +129,46 @@ body > p:last-of-type {
     font-size: 14px;
     margin-top: 40px;
     color: rgba(0, 0, 0, 0.6);
+}
+
+/* ISSO AQUI DEVE SER ESCRITO SEMPRE NO FINAL DE TUDO */
+.lista.formacao{
+    background-color: transparent;
+    text-align: left;
+}
+
+.itemformacao {
+    display: inline;
+}
+
+.lista.projetos{
+    background-color: transparent;
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.itemprojetos {
+    display: inline;
+}
+
+.btnprojetos {
+  color: #003366;
+}
+
+.lista.link{
+    background-color: transparent;
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.itemlink {
+    display: inline;
+}
+
+.btnlink{
+  color: #003366;
 }
